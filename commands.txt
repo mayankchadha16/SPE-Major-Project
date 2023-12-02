@@ -1,0 +1,9 @@
+docker rm -f mongoDb
+
+sudo docker ps -s
+
+sudo docker rmi -f frontend
+
+sudo docker build -t backend .
+
+sudo docker-compose down
