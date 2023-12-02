@@ -1,9 +1,12 @@
 docker rm -f mongoDb
 
+docker run -it --name mongoDb -p 27017:27017 -d mongo 
+
 sudo docker ps -s
 
 sudo docker rmi -f frontend
 
 sudo docker build -t backend .
 
+sudo docker-compose up
 sudo docker-compose down
