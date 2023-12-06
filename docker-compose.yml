@@ -18,5 +18,7 @@ services:
     image: mongo
     ports:
       - "27017:27017"
+      # - "27018:27017" changed port
     volumes:
-      - /home/gandalf/GameShopDevOps/data/db:/data/db:rw
+      - /home/mayank1609/GameShopDevOps/data/db:/data/db:rw
+      # - /home/gandalf/GameShopDevOps/data/db:/data/db:rw
