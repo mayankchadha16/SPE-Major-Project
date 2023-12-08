@@ -45,27 +45,18 @@ pipeline {
             }
         }
 
-        stage('Stage 5: Push Backend to DockerHub') {
+        stage('Stage 5: Push Backend and Frontend to DockerHub') {
             steps {
                 script {
                     docker.withRegistry('', 'DockerHubCred') {
                         sh 'docker push menkchad/backend'
-                    }
-                }
-            }
-        }
-        
-        stage('Stage 6: Push Frontend to DockerHub') {
-            steps {
-                script {
-                    docker.withRegistry('', 'DockerHubCred') {
                         sh 'docker push menkchad/frontend'
                     }
                 }
             }
-}
+        }
 
-        stage('Stage 7: Clean') {
+        stage('Stage 6: Clean') {
             steps {
                 script {
                     sh 'docker container prune -f'
@@ -76,7 +67,7 @@ pipeline {
             }
         }
 
-        stage('Stage 8: Ansible Deployment') {
+        stage('Stage 7: Ansible Deployment') {
             steps {
                 ansiblePlaybook(
                     becomeUser: null,
