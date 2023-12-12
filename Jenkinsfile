@@ -66,7 +66,7 @@ pipeline {
                 script {
                     sh 'docker container prune -f'
                     sh 'docker image prune -f'
-                    // sh 'if [ -n "$(docker ps -aq)" ]; then docker rm -f $(docker ps -aq); fi'
+                    sh 'if [ -n "$(docker ps -aq)" ]; then docker rm -f $(docker ps -aq); fi'
                     // sh 'if [ -n "$(docker images -aq)" ]; then docker rmi -f $(docker images -aq); fi'
                 }
             }
