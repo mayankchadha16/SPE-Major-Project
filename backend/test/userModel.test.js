@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const sinon = require('sinon');
 const bcrypt = require('bcryptjs');
 const validator = require('validator');
-const userModel = require('../models/userModel'); // Update the path accordingly
+const userModel = require('../models/userModel'); 
 
 describe('User Model', () => {
   describe('signup method', () => {
