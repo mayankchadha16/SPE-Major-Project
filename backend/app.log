@@ -1,0 +1,6 @@
+{"level":"info","message":"User created","timestamp":"12/Dec/2023:18:07:19 +0530","username":"tota@gmail.com"}
+{"level":"info","message":"morgan","method":"POST","responseTime":"148.389 ms","status":"200","timestamp":"12/Dec/2023:18:07:19 +0530","url":"/api/user/signup"}
+{"level":"info","message":"morgan","method":"GET","responseTime":"13.169 ms","status":"200","timestamp":"12/Dec/2023:18:07:19 +0530","url":"/api/workouts"}
+{"level":"info","message":"morgan","method":"GET","responseTime":"12.723 ms","status":"304","timestamp":"12/Dec/2023:18:07:20 +0530","url":"/api/workouts"}
+{"level":"info","message":"New workout created","timestamp":"12/Dec/2023:18:07:23 +0530","title":"masti"}
+{"level":"info","message":"morgan","method":"POST","responseTime":"18.658 ms","status":"200","timestamp":"12/Dec/2023:18:07:23 +0530","url":"/api/workouts"}
