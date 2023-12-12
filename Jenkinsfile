@@ -27,8 +27,8 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/mayankchadha16/SPE-Major-Project'
             }
         }
-        
-        stage('Stage 3: Build Backend') {
+
+        stage('Stage 3: Testing') {
             steps {
                 dir('backend')
                 {
@@ -36,10 +36,15 @@ pipeline {
                 }
             }
         }
-
-        stage('Stage 4: Build Frontend') {
+        
+        stage('Stage 4: Build Frontend and Backend') {
             steps {
-                dir('frontend') {
+                dir('backend')
+                {
+                    sh "docker build -t menkchad/backend ."
+                }
+                dir('frontend') 
+                {
                     sh "docker build -t menkchad/frontend ."
                 }
             }
