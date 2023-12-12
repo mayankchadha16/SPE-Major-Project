@@ -33,7 +33,7 @@ pipeline {
                 dir('backend')
                 {
                     sh "docker build -t menkchad/backend-test -f Dockerfile.test ."
-                    // sh "docker run menkchad/backend-test"
+                    sh "docker run menkchad/backend-test"
                 }
             }
         }
